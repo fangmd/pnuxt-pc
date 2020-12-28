@@ -9,6 +9,7 @@
 - [x] dayjs 处理时间格式
 - [x] axios 网络请求
 - [x] Dockerize NuxtJS
+- [x] nginx 配置
 
 ## Build Setup
 
