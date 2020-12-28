@@ -1,5 +1,10 @@
 # pnuxt-pc
 
+>使用 Nuxt 实现的 PC 端 Vue SSR 项目模版
+
+
+1. bootstrap 作为基础 CSS 框架
+
 ## Build Setup
 
 ```bash
@@ -17,4 +22,3 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
