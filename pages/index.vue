@@ -3,24 +3,8 @@
     <div>
       <Logo />
       <h1 class="title">pnuxt-pc</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <div class="links"></div>
+      <div class="title">Title</div>
     </div>
   </div>
 </template>
@@ -28,6 +12,11 @@
 <script>
 export default {}
 </script>
+<style lang="less" scoped>
+.title {
+  color: green;
+}
+</style>
 
 <style>
 .container {
