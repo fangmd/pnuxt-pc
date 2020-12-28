@@ -3,14 +3,18 @@
     <div>
       <Logo />
       <h1 class="title">pnuxt-pc</h1>
-      <div class="links"></div>
-      <div class="title">Title</div>
+      <a class="title" href="/demo">Demos</a>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    console.log(process.env.NODE_ENV)
+  },
+  methods: {},
+}
 </script>
 <style lang="less" scoped>
 .title {

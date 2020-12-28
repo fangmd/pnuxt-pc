@@ -11,10 +11,10 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/css/base.less'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/axios'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -38,4 +38,8 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+  server: {
+    port: 3010,
+    host: '0.0.0.0',
+  },
 }
