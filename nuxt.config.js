@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -8,10 +10,27 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      // {
+      //   src:
+      //     'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js',
+      //   integrity:
+      //     'sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW',
+      //   crossorigin: 'anonymous',
+      //   body: true,
+      // },
+      {
+        src: '/js/bootstrap.bundle.min.js',
+        body: true,
+      },
+    ],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/css/base.less'],
+  // Global CSS (https://go.nuxtjs.dev/config-css) 先后顺序会影响 css 优先级
+  css: [
+    path.resolve(__dirname, 'node_modules/bootstrap/dist/css/bootstrap.css'),
+    '~/assets/css/base.less',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['~/plugins/axios'],
@@ -27,8 +46,6 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
