@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^5.0.0-beta1",
     "core-js": "^3.6.5",
     "dayjs": "^1.9.8",
     "nuxt": "^2.14.6"
