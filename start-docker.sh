@@ -10,8 +10,8 @@ container=$(docker container ls -aqf "name=pnuxt-pc")
 
 if [ -n "$container" ]; then
     echo "stop container and rm container"
-    docker container stop $container
-    docker container rm $container
+    docker container stop $container &&
+    docker container rm $container &&
 
     echo "start container"
     docker run --name pnuxt-pc -d -p  3010:3010 pnuxt-pc

@@ -4,10 +4,15 @@ FROM node:latest
 RUN mkdir -p /usr/src/nuxt-app
 WORKDIR /usr/src/nuxt-app
 
+# Copy files to image
+COPY ["./package.json", "./package-lock.json", "/usr/src/nuxt-app/"]
+
+# run npm install before copy ./src can help you cache images
+RUN npm install
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm install
+
 RUN npm run build
 
 EXPOSE 3010
